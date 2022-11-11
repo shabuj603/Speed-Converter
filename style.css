@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.first_section{
+    margin-bottom: 30px;
+}
+h1.speed{
+    background-color: green;
+    padding: 10px;
+    display:block   ;
+}
+.input{
+    padding: 8px;
+    display: block;
+    width: 100%;
+}
+.second_section{   
+    margin-bottom: 20px;
+}
+.length{
+    margin-top: 10px;
+}
