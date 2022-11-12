@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>speed</title>
 </head>
+
 <body>
-    <h1>speed</h1>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div> 
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navFunction()">&#9776;</a>
+      </div>
+    <div class="first_section">
+        <h1 class="speed">speed</h1>
+
+        <input type="number" onchange="speedConverter(this.value)" placeholder="MPH" id=""
+            oninput="speedConverter(this.value)">
+        <p>KPH: <span id="outputKPH"></span></p>
+        <p>Knots: <span id="outputKnots"></span></p>
+        <p>Mach: <span id="outputMach"></span></p>
+    </div>
+
+    <!-- Length Converter -->
+    <div class="second_section">
+        <h1 class="speed">Length Converter</h1>
+        <div class="length">
+            <label for="">Feet</label>
+            <input type="number" id="inputFeet" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="Feet">
+            <label for="">Inches</label>
+            <input type="number" id="inputInches" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="Inches ">
+            <label for="">Meters</label>
+            <input type="number" id="inputMeters" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="Meters ">
+            <label for="">cm</label>
+            <input type="number" id="inputcm" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="cm">
+            <label for="">Yards</label>
+            <input type="number" id="inputYards" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="Yards">
+            <label for="">Kilometers</label>
+            <input type="number" id="inputKilometers" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="Kilometers">
+            <label for="">Miles</label>
+            <input type="number" id="inputMiles" oninput="lengthConverter(this.id,this.value)"
+                onchange="lengthConverter(this.id,this.value)" placeholder="Miles">
+        </div>
+    </div>
+
+    <!-- piechart -->
+    <div class="second_section">
+
+        <h1 class="speed">piechart</h1>     
+        <div id="piechart"></div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       
+    </div>
+
+    <div id="piechart"></div>
+
+
+    <!-- side menu  -->
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" onclick="closeNav()" class="closebtn">&times;</a>
+        <div class="overly-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 </body>
+<script src="script.js"></script>
+
 </html>
